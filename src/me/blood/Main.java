@@ -12,7 +12,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin implements Listener {
@@ -34,7 +34,7 @@ public class Main extends JavaPlugin implements Listener {
 	}
 	
 	@EventHandler
-	public void onBlood(EntityDamageByEntityEvent e)
+	public void onBlood(EntityDamageEvent e)
 	{
 		Entity entity = e.getEntity();
 		Location entityloc = entity.getLocation();
@@ -59,7 +59,7 @@ public class Main extends JavaPlugin implements Listener {
 					p.sendMessage("§4Blood");
 					p.sendMessage("");
 					p.sendMessage("§r/Blood info");
-					p.sendMessage("§r/blood reload");
+					p.sendMessage("§r/Blood reload");
 					p.sendMessage("");
 					p.sendMessage("§4Blood");
 					p.sendMessage("§4================");
